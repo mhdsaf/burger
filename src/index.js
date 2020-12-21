@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
-import Header from './components/Header/redux/reducers/headerReducers'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import registerServiceWorker from './registerServiceWorker'
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import { Provider } from 'react-redux'
+import QuestionReducer from './redux/reducer'
 import thunk from 'redux-thunk'
 const rootReducer = combineReducers({
-    headerState: Header
+    questionState: QuestionReducer
 })
 // Adding a middleware function:
 const loggerMiddleware = (store)=>{
